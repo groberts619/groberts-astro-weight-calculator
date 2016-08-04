@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<script type="text/javascript" src="./javascript/index.js"></script>
+	<title>Mortgage Calculator</title>
+</head>
+
+<body>
+	<h1>Mortgage Calculator</h1>
+	<div>
+	<!-- input element for the user to enter the mortgage loan balance in US dollars. -->
+		<p class="input-element">
+			<label>Mortgage Balance</label>
+			<br>
+			<input type="text" id="balance">
+		</p>
+	<!-- An input element for the user to enter the annual percentage rate of charge (APR). -->
+		<p class="input-element">
+			<label>Annual Percentage Rate</label>
+			<br>
+			<input type="text" id="interestRate">
+		</p>
+	<!-- An input element for the user to enter the loan term in years. -->
+		<p class="input-element">
+			<label>Loan Term</label>
+			<br>
+			<input type="text" id="loanTerm">
+		</p>
+		<p class="input-selector">
+			<label>Payment Plan</label>
+			<br> 
+			<select id="period">
+				<option value="12">Monthly</option>
+				<option value="6">Bimonthly</option>
+			</select>
+		</p>
+	</div>
+	<br>
+	<!-- Calculate Button -->
+	<div id="calc">
+		<input type="submit" id="calcSubmit" value="Calculate Payment" size="25">
+	</div>
+
+<!-- A p element to display the expected output. -->	
+
+	<p id="outField"></p>
+
+<!-- A button element for the user to calculate their weight based on the above inputs. -->
+
+	<script>
+		$("#calcSubmit").click(outputPayment);
+	</script>
+
+
+
+	
+</body>
